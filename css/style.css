@@ -1,16 +1,17 @@
 #run-button {
   height: 10vmin;
   width: 80vmin;
-  margin: 0 auto;
+  margin: 10vmin auto;
   display: block;
-  background-color: rgb(200, 0, 0);
+  background-color: rgb(255, 100, 100);
 }
 
 #run-button:hover {
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(255, 100, 100);
   cursor: pointer;
 }
 
 #run-button:active {
-  background-color: rgb(200, 0, 0);
+  background-color: rgb(255, 0, 0);
+}
 }
