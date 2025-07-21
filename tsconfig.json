@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES6", // JavaScriptのターゲットバージョン
-    "module": "commonjs", // モジュール形式
+    "module": "ES6", // モジュール形式
     "outDir": "./public/dist", // 出力先ディレクトリ
     "rootDir": "./src", // ソースディレクトリ
     "strict": true, // 厳格な型チェック
