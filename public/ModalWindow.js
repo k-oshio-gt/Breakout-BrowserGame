@@ -5,6 +5,7 @@ const modal = document.getElementsByClassName("modal")[0];
 const buttonRun = document.getElementById("run-button");
 buttonRun.addEventListener("click", clickRunButton);
 function clickRunButton() {
+  // モーダルウィンドウを表示
   modal.style.display = "block";;
 }
 
@@ -12,5 +13,6 @@ function clickRunButton() {
 const buttonClose = document.getElementsByClassName("modal-close")[0];
 buttonClose.addEventListener("click", clickCloseButton);
 function clickCloseButton() {
+  // モーダルウィンドウを非表示
   modal.style.display = "none";
 }
