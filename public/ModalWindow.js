@@ -6,7 +6,7 @@ const buttonRun = document.getElementById("run-button");
 buttonRun.addEventListener("click", clickRunButton);
 function clickRunButton() {
   // モーダルウィンドウを表示
-  modal.style.display = "block";;
+  modal.style.display = "block";
 }
 
 // モーダルウィンドウの閉じるボタンクリックイベント
