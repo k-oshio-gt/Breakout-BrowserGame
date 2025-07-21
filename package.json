@@ -1,0 +1,19 @@
+{
+  "name": "browser-game",
+  "version": "1.0.0",
+  "description": "ブラウザゲーム",
+  "main": "public/ModalWindow.js",
+  "scripts": {
+    "build": "tsc",
+    "serve": "http-server ./public -c-1",
+    "start": "npm run build && npm run serve"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "http-server": "^14.1.1"
+  }
+}

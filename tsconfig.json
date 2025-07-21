@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // JavaScriptのターゲットバージョン
+    "module": "ES6", // モジュール形式
+    "outDir": "./public/dist", // 出力先ディレクトリ
+    "rootDir": "./src", // ソースディレクトリ
+    "strict": true, // 厳格な型チェック
+    "esModuleInterop": true, // ESモジュール互換
+    "forceConsistentCasingInFileNames": true // ファイル名の大文字小文字の一貫性を強制
+  }
+}
