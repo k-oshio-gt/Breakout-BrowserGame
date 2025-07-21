@@ -2,6 +2,6 @@ chcp 65001
 
 rem ディレクトリ移動してビルド
 cd ..
-tsc
+npm run build
 
 pause

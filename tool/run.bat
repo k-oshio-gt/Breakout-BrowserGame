@@ -2,7 +2,7 @@ chcp 65001
 
 rem Node.jsでHTTPサーバを起動
 cd ..
-start http-server -c-1
+start npm run start
 
 rem Chromeをシークレットモードで起動
 C:
