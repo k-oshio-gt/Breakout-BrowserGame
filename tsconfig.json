@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES6", // JavaScriptのターゲットバージョン
     "module": "commonjs", // モジュール形式
-    "outDir": "./dist", // 出力先ディレクトリ
+    "outDir": "./public/dist", // 出力先ディレクトリ
     "rootDir": "./src", // ソースディレクトリ
     "strict": true, // 厳格な型チェック
     "esModuleInterop": true, // ESモジュール互換
