@@ -25,7 +25,7 @@ export class BrowserGameManager {
      * @param gameName ブラウザゲーム名
      * @param canvas Canvas要素
      */
-    public constructor(gameName: string, canvas: HTMLElement) {
+    public constructor(gameName: string, canvas: HTMLCanvasElement) {
         throw new Error("未実装");
     }
 
@@ -34,7 +34,7 @@ export class BrowserGameManager {
      * @param canvas Canvas要素
      * @returns Canvas2Dコンテキスト
      */
-    private getContext(canvas: HTMLElement): CanvasRenderingContext2D {
+    private getContext(canvas: HTMLCanvasElement): CanvasRenderingContext2D {
         throw new Error("未実装");
     }
 
