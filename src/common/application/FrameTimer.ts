@@ -5,7 +5,7 @@ export class FrameTimer {
     /**
      * 計測開始時刻[s]
      */
-    private startTime: number = null!;
+    private startTime: number = undefined!;
 
     /**
      * 計測開始

@@ -8,27 +8,27 @@ export class FixedStepFrameUpdater implements IFrameUpdater {
     /**
      * 更新間隔[s]
      */
-    private interval: number = null!;
+    private interval: number = undefined!;
 
     /**
      * 更新処理のコールバック関数
      */
-    private updateFunc: Function = null!;
+    private updateFunc: Function = undefined!;
 
     /**
      * ゲーム開始からの経過時間[s]
      */
-    private elapsedTimeRange: number = null!;
+    private elapsedTimeRange: number = undefined!;
 
     /**
      * ゲーム内時刻[s]
      */
-    private gameTime: number = null!;
+    private gameTime: number = undefined!;
 
     /**
      * タイマー
      */
-    private timer: FrameTimer = null!;
+    private timer: FrameTimer = undefined!;
 
     /**
      * コンストラクタ

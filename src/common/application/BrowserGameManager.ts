@@ -8,17 +8,17 @@ export class BrowserGameManager {
     /**
      * ゲーム停止フラグ
      */
-    private stopFlag: boolean = null!;
+    private stopFlag: boolean = undefined!;
 
     /**
      * フレーム更新器
      */
-    private frameUpdater: IFrameUpdater = null!;
+    private frameUpdater: IFrameUpdater = undefined!;
 
     /**
      * ブラウザゲームオブジェクト
      */
-    private browserGame: IBrowserGame = null!;
+    private browserGame: IBrowserGame = undefined!;
 
     /**
      * コンストラクタ
