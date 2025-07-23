@@ -7,9 +7,10 @@ import { IGameProperty } from "./IGameProperty";
 export class JsonGamePropertyReader implements IGamePropertyReader {
     /**
      * ブラウザゲーム設定の読み込み
+     * @param gameName ブラウザゲーム名
      * @return ブラウザゲーム設定
      */
-    public read(): IGameProperty {
+    public read(gameName: string): IGameProperty {
         throw new Error("未実装");
     }
 }

@@ -6,7 +6,8 @@ import { IGameProperty } from "./IGameProperty";
 export interface IGamePropertyReader {
     /**
      * ブラウザゲーム設定の読み込み
+     * @param gameName ブラウザゲーム名
      * @return ブラウザゲーム設定
      */
-    read(): IGameProperty;
+    read(gameName: string): IGameProperty;
 }
