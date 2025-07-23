@@ -22,8 +22,10 @@ export class BrowserGameManager {
 
     /**
      * コンストラクタ
+     * @param gameName ブラウザゲーム名
+     * @param canvas Canvas要素
      */
-    public constructor() {
+    public constructor(gameName: string, canvas: HTMLElement) {
         throw new Error("未実装");
     }
 
