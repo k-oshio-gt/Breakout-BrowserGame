@@ -62,6 +62,18 @@ export class FixedStepFrameUpdater implements IFrameUpdater {
      * フレーム更新
      */
     private update(): void {
-        throw new Error("未実装");
+        // ゲーム開始からの経過時間を取得
+        this.elapsedTimeRange = this.timer.measure();
+        // 実行するべき更新処理の回数を計算
+        const updateCount = Math.floor((this.elapsedTimeRange - this.gameTime) / this.interval);
+
+        for (let i = 0; i < updateCount; i++) {
+            // 更新処理を実行
+            this.updateFunc(this.interval);
+        }
+        // ゲーム内時刻を更新
+        this.gameTime += updateCount * this.interval;
+        // 次の描画タイミングで呼び出してもらうようブラウザに依頼
+        window.requestAnimationFrame(this.update.bind(this));
     }
 }
