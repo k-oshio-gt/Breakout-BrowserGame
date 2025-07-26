@@ -34,7 +34,9 @@ export class FixedStepFrameUpdater implements IFrameUpdater {
      * コンストラクタ
      */
     public constructor() {
-        throw new Error("未実装");
+        this.elapsedTimeRange = 0.0;
+        this.gameTime = 0.0;
+        this.timer = new FrameTimer();
     }
 
     /**
@@ -43,7 +45,8 @@ export class FixedStepFrameUpdater implements IFrameUpdater {
      * @param updateFunc 更新処理のコールバック関数
      */
     public initialize(interval: number, updateFunc: (deltaTime: number) => void): void {
-        throw new Error("未実装");
+        this.interval = interval;
+        this.updateFunc = updateFunc;
     }
 
     /**
