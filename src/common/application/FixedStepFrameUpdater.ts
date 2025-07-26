@@ -13,7 +13,7 @@ export class FixedStepFrameUpdater implements IFrameUpdater {
     /**
      * 更新処理のコールバック関数
      */
-    private updateFunc: Function = undefined!;
+    private updateFunc: (deltaTime: number) => void = undefined!;
 
     /**
      * ゲーム開始からの経過時間[s]
@@ -42,7 +42,7 @@ export class FixedStepFrameUpdater implements IFrameUpdater {
      * @param interval 更新間隔[s]
      * @param updateFunc 更新処理のコールバック関数
      */
-    public initialize(interval: number, updateFunc: Function): void {
+    public initialize(interval: number, updateFunc: (deltaTime: number) => void): void {
         throw new Error("未実装");
     }
 
