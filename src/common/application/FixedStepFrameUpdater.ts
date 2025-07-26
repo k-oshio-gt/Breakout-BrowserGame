@@ -47,13 +47,15 @@ export class FixedStepFrameUpdater implements IFrameUpdater {
     public initialize(interval: number, updateFunc: (deltaTime: number) => void): void {
         this.interval = interval;
         this.updateFunc = updateFunc;
+        // ゲーム開始時刻を登録
+        this.timer.start();
     }
 
     /**
      * フレーム更新の開始
      */
     public start(): void {
-        throw new Error("未実装");
+        window.requestAnimationFrame(this.update.bind(this));
     }
 
     /**
