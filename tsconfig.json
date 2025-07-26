@@ -6,6 +6,10 @@
     "rootDir": "./src", // ソースディレクトリ
     "strict": true, // 厳格な型チェック
     "esModuleInterop": true, // ESモジュール互換
-    "forceConsistentCasingInFileNames": true // ファイル名の大文字小文字の一貫性を強制
-  }
+    "forceConsistentCasingInFileNames": true, // ファイル名の大文字小文字の一貫性を強制
+    "skipLibCheck": true, // ライブラリの型チェックをスキップ
+  },
+  "include": [
+    "./src/**/*", // src配下の全てのファイル
+  ]
 }
