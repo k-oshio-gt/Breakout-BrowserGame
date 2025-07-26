@@ -13,7 +13,7 @@ export class FixedStepFrameUpdater implements IFrameUpdater {
     /**
      * 更新処理のコールバック関数
      */
-    private updateFunc: Function = undefined!;
+    private updateFunc: (deltaTime: number) => void = undefined!;
 
     /**
      * ゲーム開始からの経過時間[s]
@@ -34,7 +34,9 @@ export class FixedStepFrameUpdater implements IFrameUpdater {
      * コンストラクタ
      */
     public constructor() {
-        throw new Error("未実装");
+        this.elapsedTimeRange = 0.0;
+        this.gameTime = 0.0;
+        this.timer = new FrameTimer();
     }
 
     /**
@@ -42,21 +44,36 @@ export class FixedStepFrameUpdater implements IFrameUpdater {
      * @param interval 更新間隔[s]
      * @param updateFunc 更新処理のコールバック関数
      */
-    public initialize(interval: number, updateFunc: Function): void {
-        throw new Error("未実装");
+    public initialize(interval: number, updateFunc: (deltaTime: number) => void): void {
+        this.interval = interval;
+        this.updateFunc = updateFunc;
+        // ゲーム開始時刻を登録
+        this.timer.start();
     }
 
     /**
      * フレーム更新の開始
      */
     public start(): void {
-        throw new Error("未実装");
+        window.requestAnimationFrame(this.update.bind(this));
     }
 
     /**
      * フレーム更新
      */
     private update(): void {
-        throw new Error("未実装");
+        // ゲーム開始からの経過時間を取得
+        this.elapsedTimeRange = this.timer.measure();
+        // 実行するべき更新処理の回数を計算
+        const updateCount = Math.floor((this.elapsedTimeRange - this.gameTime) / this.interval);
+
+        for (let i = 0; i < updateCount; i++) {
+            // 更新処理を実行
+            this.updateFunc(this.interval);
+        }
+        // ゲーム内時刻を更新
+        this.gameTime += updateCount * this.interval;
+        // 次の描画タイミングで呼び出してもらうようブラウザに依頼
+        window.requestAnimationFrame(this.update.bind(this));
     }
 }
