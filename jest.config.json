@@ -9,6 +9,6 @@
         "^.+\\.ts$": "ts-jest"
     },
     "testMatch": [
-        "**/*.test.ts"
+        "**/__tests__/**/*.test.ts"
     ]
 }
